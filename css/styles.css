@@ -16,16 +16,25 @@ body {
 
 .container {
   background-color: #ecf2f8;
-  max-width: 1490px;
+  max-width: 1440px;
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 425px 400px;
+  grid-template-rows: max-content max-content;
   row-gap: 4rem;
   column-gap: 4rem; }
+  @media only screen and (max-width: 450px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 6rem;
+      margin-bottom: 6rem; } }
   .container .box {
     border-radius: 1rem;
     padding: 4rem; }
+    @media only screen and (max-width: 450px) {
+      .container .box {
+        padding: 3.5rem; } }
     .container .box--1 {
       background-color: #7541c8;
       grid-column: 1 / span 2; }
@@ -73,18 +82,30 @@ body {
       display: flex;
       flex-direction: column; }
     .container .user__name {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 500;
       margin-bottom: 0.2rem; }
+      @media only screen and (max-width: 450px) {
+        .container .user__name {
+          font-size: 1.5rem; } }
     .container .user__status {
       font-size: 1.3rem;
       color: lightgrey; }
+      @media only screen and (max-width: 450px) {
+        .container .user__status {
+          font-size: 1.2rem; } }
     .container .user__heading-primary {
       font-size: 3rem;
       color: white;
       margin-bottom: 2.4rem; }
+      @media only screen and (max-width: 450px) {
+        .container .user__heading-primary {
+          font-size: 2rem; } }
     .container .user__paragraph {
       font-size: 2rem;
       color: lightgrey;
       font-weight: 500;
       margin-bottom: 0rem; }
+      @media only screen and (max-width: 450px) {
+        .container .user__paragraph {
+          font-size: 1.5rem; } }
