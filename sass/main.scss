@@ -20,28 +20,38 @@ body {
   background-color: hsl(210, 46%, 95%);
   font-family: "Barlow Semi Condensed", sans-serif;
 
-  height: 100vh;
+  min-height: 100vh;
+  place-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 450px) {
+    height: 100%;
+  }
 }
 
 .container {
-  background-color: hsl(210, 46%, 95%);
-  max-width: 1440px;
-  padding: 20px;
+  // background-color: red;
+  max-width: 1395px;
+  padding: 6.2rem 2rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: max-content max-content;
-  row-gap: 4rem;
-  column-gap: 4rem;
+  row-gap: 4.2rem;
+  column-gap: 4.2rem;
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 550px) {
     display: flex;
     flex-direction: column;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+  }
+
+  @media only screen and (max-width: 1260px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, max-content);
+    row-gap: 3.2rem;
+    column-gap: 3.2rem;
   }
 
   .box {
@@ -55,16 +65,31 @@ body {
     &--1 {
       background-color: $primary-color;
       grid-column: 1 / span 2;
+
+      @media only screen and (max-width: 1260px) {
+        grid-column: 1 / -1;
+      }
     }
 
     &--2 {
       background-color: hsl(217, 19%, 35%);
+
+      @media only screen and (max-width: 1260px) {
+        height: fit-content;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
     }
 
     &--3 {
       background-color: #fff;
       grid-column: 4 / 5;
       grid-row: 1 / -1;
+
+      @media only screen and (max-width: 1260px) {
+        grid-column: 2 / -2;
+        grid-row: 2 / 4;
+      }
 
       .user__name {
         color: hsl(219, 29%, 14%);
@@ -87,6 +112,12 @@ body {
       background-color: #fff;
       grid-column: 1 / 2;
 
+      @media only screen and (max-width: 1260px) {
+        height: fit-content;
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+
       .user__name {
         color: hsl(219, 29%, 14%);
       }
@@ -107,6 +138,11 @@ body {
     &--5 {
       background-color: hsl(219, 29%, 14%);
       grid-column: 2 / 4;
+
+      @media only screen and (max-width: 1260px) {
+        grid-column: 1 / -1;
+        grid-row: 4 / -1;
+      }
     }
   }
 
@@ -131,7 +167,7 @@ body {
     }
 
     &__name {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       font-weight: 500;
       margin-bottom: 0.2rem;
 
@@ -150,7 +186,7 @@ body {
     }
 
     &__heading-primary {
-      font-size: 3rem;
+      font-size: 2.6rem;
       color: white;
       margin-bottom: 2.4rem;
 
@@ -160,7 +196,7 @@ body {
     }
 
     &__paragraph {
-      font-size: 2rem;
+      font-size: 1.7rem;
       color: lightgrey;
       font-weight: 500;
       margin-bottom: 0rem;
