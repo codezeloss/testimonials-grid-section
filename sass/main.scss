@@ -1,3 +1,146 @@
-@import "/sass/base";
-@import "/sass/components";
-@import "/sass/layout";
+$primary-color: hsl(263, 55%, 52%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: lightgray;
+  max-width: 1440px;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: max-content max-content;
+  row-gap: 4rem;
+  column-gap: 4rem;
+
+  .box {
+    border-radius: 1rem;
+    padding: 4rem;
+
+    &--1 {
+      background-color: $primary-color;
+      grid-column: 1 / span 2;
+    }
+
+    &--2 {
+      background-color: hsl(217, 19%, 35%);
+    }
+
+    &--3 {
+      background-color: #fff;
+      grid-column: 4 / 5;
+      grid-row: 1 / -1;
+
+      .user__name {
+        color: hsl(219, 29%, 14%);
+      }
+
+      .user__status {
+        color: lightslategray;
+      }
+
+      .user__heading-primary {
+        color: hsl(219, 29%, 14%);
+      }
+
+      .user__paragraph {
+        color: lightslategray;
+      }
+    }
+
+    &--4 {
+      background-color: #fff;
+      grid-column: 1 / 2;
+
+      .user__name {
+        color: hsl(219, 29%, 14%);
+      }
+
+      .user__status {
+        color: lightslategray;
+      }
+
+      .user__heading-primary {
+        color: hsl(219, 29%, 14%);
+      }
+
+      .user__paragraph {
+        color: lightslategray;
+      }
+    }
+
+    &--5 {
+      background-color: hsl(219, 29%, 14%);
+      grid-column: 2 / 4;
+    }
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-bottom: 2rem;
+
+    &__image {
+      border-radius: 50%;
+      border: 2px solid rgba(211, 211, 211, 0.557);
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: 1.8rem;
+    }
+
+    &__infos {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__name {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    &__status {
+      font-size: 1.3rem;
+      color: lightgrey;
+    }
+
+    &__heading-primary {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2.4rem;
+    }
+
+    &__paragraph {
+      font-size: 1.8rem;
+      color: lightgrey;
+      font-weight: 500;
+      margin-bottom: 0rem;
+    }
+  }
+}

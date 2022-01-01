@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  background-color: #ecf2f8;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.container {
+  background-color: lightgray;
+  max-width: 1440px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: max-content max-content;
+  row-gap: 4rem;
+  column-gap: 4rem; }
+  .container .box {
+    border-radius: 1rem;
+    padding: 4rem; }
+    .container .box--1 {
+      background-color: #7541c8;
+      grid-column: 1 / span 2; }
+    .container .box--2 {
+      background-color: #48556a; }
+    .container .box--3 {
+      background-color: #fff;
+      grid-column: 4 / 5;
+      grid-row: 1 / -1; }
+      .container .box--3 .user__name {
+        color: #19212e; }
+      .container .box--3 .user__status {
+        color: lightslategray; }
+      .container .box--3 .user__heading-primary {
+        color: #19212e; }
+      .container .box--3 .user__paragraph {
+        color: lightslategray; }
+    .container .box--4 {
+      background-color: #fff;
+      grid-column: 1 / 2; }
+      .container .box--4 .user__name {
+        color: #19212e; }
+      .container .box--4 .user__status {
+        color: lightslategray; }
+      .container .box--4 .user__heading-primary {
+        color: #19212e; }
+      .container .box--4 .user__paragraph {
+        color: lightslategray; }
+    .container .box--5 {
+      background-color: #19212e;
+      grid-column: 2 / 4; }
+  .container .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    margin-bottom: 2rem; }
+    .container .user__image {
+      border-radius: 50%;
+      border: 2px solid rgba(211, 211, 211, 0.557);
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: 1.8rem; }
+    .container .user__infos {
+      display: flex;
+      flex-direction: column; }
+    .container .user__name {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem; }
+    .container .user__status {
+      font-size: 1.3rem;
+      color: lightgrey; }
+    .container .user__heading-primary {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2.4rem; }
+    .container .user__paragraph {
+      font-size: 1.8rem;
+      color: lightgrey;
+      font-weight: 500;
+      margin-bottom: 0rem; }
