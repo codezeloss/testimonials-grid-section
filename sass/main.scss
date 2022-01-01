@@ -28,12 +28,12 @@ body {
 
 .container {
   background-color: lightgray;
-  max-width: 1440px;
+  max-width: 1490px;
   padding: 20px;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: max-content max-content;
+  grid-template-rows: 425px 400px;
   row-gap: 4rem;
   column-gap: 4rem;
 
@@ -137,7 +137,7 @@ body {
     }
 
     &__paragraph {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: lightgrey;
       font-weight: 500;
       margin-bottom: 0rem;
